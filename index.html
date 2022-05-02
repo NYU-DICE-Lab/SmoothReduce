@@ -21,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
@@ -35,6 +35,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 </head>
 <body>
 
@@ -133,19 +135,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/NYU-DICE-Lab/SmoothReduce"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -244,7 +236,18 @@
     </div>
   </div>
 </section> -->
-
+<section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+              <p style="text-align:center;"><img src="static/images/paper_summary.png" alt="We show a 1.2x, 1.3x, 2.3x improvement in average certified radii for Smooth-Reduce over Smooth-Adv and 1.6x, 2.3x, 3.9x over MACER for sigma=0.25, 0.5, 1.0"></p>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -269,6 +272,50 @@
         </div>
       </div>
     </div>
+
+    <!-- Algo and Results. -->
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="column is-centered is-full-width">
+            <img src="static/images/algo_block.png" alt="Algorithm: Patchify a resized image, create N noisy copies and do randomized smoothing with an aggregation step (max or mean).">
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="hero is-light is-medium has-carousel">
+  
+            <h2 class="title is-size-3">Results</h2>
+            <div id="results-carousel" class="hero-carousel">
+              <div class="item-1 item-cifar10">
+                <figure>
+                  <img src="static/images/results_cifar10.png" alt="CIFAR-10", height="">
+                  <figcaption>
+                    <p>Improved certificates for CIFAR-10</p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="item-2 item-imagenet">
+                <img src="static/images/results-imagenet.png" alt="Imagenet results">
+              </div> 
+              <div class="item-3 item-video">
+                <img src="static/images/results-video.png" alt="Video Results">
+              </div>     
+            </div>
+          <div class="hero-head"></div>
+		  	  <div class="hero-body"></div>
+			    <div class="hero-foot"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+		<script>
+			bulmaCarousel.attach('#results-carousel', {
+				slidesToScroll: 1,
+				slidesToShow: 4
+			});
+		</script>
+
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
