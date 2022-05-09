@@ -1,5 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+    transform: scale(0.95);
+    transform-origin: 0 0;
 }
 
 
@@ -154,4 +156,13 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+
+figure img {
+  vertical-align: middle;
+}
+figure figcaption {
+  text-align: center;
+  font-size: 20px;
 }
